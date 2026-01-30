@@ -27,8 +27,6 @@ yarn-error.log*
 Thumbs.db
 
 # Environment files (secrets should use wrangler secret)
-.env
-.env.*
 !.env.example
 
 # TypeScript
@@ -36,3 +34,4 @@ Thumbs.db
 
 # Docker build artifacts
 *.tar
+config.bat
