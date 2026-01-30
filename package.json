@@ -5,10 +5,10 @@
   "private": true,
   "description": "Run Moltbot personal AI assistant in a Cloudflare Sandbox",
   "scripts": {
-    "build": "vite build",
+    "build": "node init && vite build",
     "deploy": "npm run build && wrangler deploy",
-    "dev": "vite dev",
-    "start": "wrangler dev",
+    "dev": "node init && vite dev",
+    "start": "node init && wrangler dev",
     "types": "wrangler types",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -44,7 +44,7 @@
         "description": "Your [Anthropic API key](https://console.anthropic.com/)."
       },
       "MOLTBOT_GATEWAY_TOKEN": {
-        "description": "Token to protect gateway access. Random string, you can generate one with `openssl rand -base64 32`, for example."
+        "description": "Token for gateway access. Generate with: openssl rand -hex 32"
       }
     }
   }
